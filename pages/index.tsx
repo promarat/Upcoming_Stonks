@@ -23,9 +23,7 @@ const Home: NextPage<Props> = ({eventData}) => {
     }
 
     setUpcomingEvents(eventData.filter((data: Event) => {
-      return 
-        data.name.toLowerCase().indexOf(filterString.toLocaleLowerCase()) != -1 || 
-        data.short_description.toLocaleLowerCase().indexOf(filterString.toLocaleLowerCase()) != -1;
+      return data.name.toLowerCase().indexOf(filterString.toLocaleLowerCase()) != -1 || data.short_description.toLocaleLowerCase().indexOf(filterString.toLocaleLowerCase()) != -1;
     }));
 
   }, [filterString])
